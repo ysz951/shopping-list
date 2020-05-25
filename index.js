@@ -1,11 +1,16 @@
 $(function(){
     // delegation check
-    $('ul').on('click','.shopping-item-toggle',function(event){
-        let checkItem= $(this).closest('li').find('.shopping-item');
-        checkItem.toggleClass('shopping-item__checked');
-    });
+    // $('ul').on('click','.shopping-item-toggle',function(event){
+    //     let checkItem= $(this).closest('li').find('.shopping-item');
+    //     checkItem.toggleClass('shopping-item__checked');
+        
+    // });
+    $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
+        $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
+        debugger;
+      });
     // delegation delete
-    $('ul').on('click','.shopping-item-delete',function(event){
+    $('.shopping-list').on('click','.shopping-item-delete',function(event){
         let deleteItem= $(this).closest('li');
         deleteItem.remove();
     });
