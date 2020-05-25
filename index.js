@@ -22,4 +22,5 @@ $(function(){
         $(".shopping-list").append(result);
         $("#shopping-list-entry").val('');
     });
+
 });
